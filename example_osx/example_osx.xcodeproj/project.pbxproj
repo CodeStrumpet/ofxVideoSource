@@ -615,6 +615,25 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = NONE;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					../../../addons/ofxVideoSource/libs,
+					../../../addons/ofxVideoSource/libs/PS3EYEDriver,
+					../../../addons/ofxVideoSource/libs/PS3EYEDriver/libusb,
+					../../../addons/ofxVideoSource/libs/PS3EYEDriver/libusb/osx,
+					../../../addons/ofxVideoSource/libs/PS3EYEDriver/libusb/vc10,
+					../../../addons/ofxVideoSource/libs/PS3EYEDriver/src,
+					../../../addons/ofxVideoSource/libs/ofxLibdc,
+					../../../addons/ofxVideoSource/libs/ofxLibdc/libs,
+					../../../addons/ofxVideoSource/libs/ofxLibdc/libs/osx,
+					../../../addons/ofxVideoSource/libs/ofxLibdc/libs/osx/include,
+					../../../addons/ofxVideoSource/libs/ofxLibdc/libs/osx/include/dc1394,
+					../../../addons/ofxVideoSource/libs/ofxLibdc/libs/osx/include/dc1394/macosx,
+					../../../addons/ofxVideoSource/libs/ofxLibdc/libs/osx/include/dc1394/vendor,
+					../../../addons/ofxVideoSource/libs/ofxLibdc/libs/osx/lib,
+					../../../addons/ofxVideoSource/libs/ofxLibdc/src,
+					../../../addons/ofxVideoSource/src,
+				);
 				ICON = "$(ICON_NAME_DEBUG)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
@@ -700,6 +719,25 @@
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = NONE;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					../../../addons/ofxVideoSource/libs,
+					../../../addons/ofxVideoSource/libs/PS3EYEDriver,
+					../../../addons/ofxVideoSource/libs/PS3EYEDriver/libusb,
+					../../../addons/ofxVideoSource/libs/PS3EYEDriver/libusb/osx,
+					../../../addons/ofxVideoSource/libs/PS3EYEDriver/libusb/vc10,
+					../../../addons/ofxVideoSource/libs/PS3EYEDriver/src,
+					../../../addons/ofxVideoSource/libs/ofxLibdc,
+					../../../addons/ofxVideoSource/libs/ofxLibdc/libs,
+					../../../addons/ofxVideoSource/libs/ofxLibdc/libs/osx,
+					../../../addons/ofxVideoSource/libs/ofxLibdc/libs/osx/include,
+					../../../addons/ofxVideoSource/libs/ofxLibdc/libs/osx/include/dc1394,
+					../../../addons/ofxVideoSource/libs/ofxLibdc/libs/osx/include/dc1394/macosx,
+					../../../addons/ofxVideoSource/libs/ofxLibdc/libs/osx/include/dc1394/vendor,
+					../../../addons/ofxVideoSource/libs/ofxLibdc/libs/osx/lib,
+					../../../addons/ofxVideoSource/libs/ofxLibdc/src,
+					../../../addons/ofxVideoSource/src,
+				);
 				ICON = "$(ICON_NAME_RELEASE)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
