@@ -1,0 +1,18 @@
+.DS_Store
+bin/*.app
+build
+emptyExample.xcodeproj/*
+watercolorwalls.xcodeproj/project.xcworkspace/xcuserdata/*
+watercolorwalls.xcodeproj/xcuserdata/*
+watercolorwalls.xcodeproj/xcshareddata/xcschemes/*
+watercolorwalls.xcodeproj/xcshareddata/xcschemes/*xcscheme
+obj/*
+bin/*exe
+*~
+xcuserdata*
+/bin/data/ignored_videos
+opencvExample.layout.cbTemp
+
+# video captures
+/bin/data/comfortzone20*
+/bin/data/avatar_videos
