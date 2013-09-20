@@ -1,11 +1,10 @@
 ofxVideoSource
 ==============
 
-OpenFrameworks camera abstraction
+**OpenFrameworks camera abstraction.**
 
-See example project for how to use.
 
-**Current camera modes supported**
+Current camera modes supported
 - VideoTypeMovie
 - VideoTypeOfVideoGrabber
 - VideoTypeDcCameraGrabber
@@ -13,4 +12,5 @@ See example project for how to use.
 - VideoTypeCodeLabsPSEye
 
 
-**Example project for windows coming soon!**
+
+***Example project for windows coming soon!***
