@@ -1,0 +1,4 @@
+ofxVideoSource
+==============
+
+OpenFrameworks camera abstraction
