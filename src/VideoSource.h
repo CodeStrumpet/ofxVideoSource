@@ -38,6 +38,7 @@ public:
     VideoSource();
 
     void setupCamera();
+    void setupCamera(int deviceID);
 
     bool updateFrame();
 
