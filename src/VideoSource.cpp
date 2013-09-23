@@ -13,6 +13,7 @@ VideoSource::VideoSource()
     videoType = VideoTypeOfVideoGrabber;
 }
 
+
 void VideoSource::setupCamera()
 {
 
@@ -29,29 +30,8 @@ void VideoSource::setupCamera()
 
     } else if (videoType == VideoTypeOfVideoGrabber || videoType == VideoTypeCodeLabsPSEye) {
 
-        cout << "ofVidGrabber is initialized: " << ofVidGrabber.isInitialized() << endl;
-        ofVidGrabber.listDevices();
-        ofVidGrabber.setDeviceID(0);
-        //ofVidGrabber.setVerbose(true);
-        ofVidGrabber.initGrabber(320, 240);  // TODO should pass in desired width & height here
-        ofVidGrabber.setDesiredFrameRate(60);
-
-        if (videoType == VideoTypeCodeLabsPSEye) {
-#ifndef TARGET_OSX
-            ofVidGrabber.setAutoExposure(false);
-            ofVidGrabber.setAutoGain(false);
-            //ofVidGrabber.videoSettings();
-#endif
-        }
-
-
-        // make sure there is sufficient space allocated for the current camera size
-        pixels.allocate(getCameraHeight(), getCameraWidth(), OF_IMAGE_COLOR);
+        setupCamera(0);
         
-        //ofVidGrabberFrame.allocate(getCameraWidth(), getCameraHeight());
-
-
-
     } else if (videoType == VideoTypeDcCameraGrabber) {
 
         #ifdef TARGET_OSX
@@ -63,6 +43,29 @@ void VideoSource::setupCamera()
         #ifdef TARGET_OSX
         ps3EyeGrabber.setupCamera(320, 240);
         #endif
+    }
+}
+
+void VideoSource::setupCamera(int deviceID) {
+    if (videoType == VideoTypeOfVideoGrabber || videoType == VideoTypeCodeLabsPSEye) {
+        
+        cout << "ofVidGrabber is initialized: " << ofVidGrabber.isInitialized() << endl;
+        ofVidGrabber.setDeviceID(deviceID);
+        ofVidGrabber.initGrabber(320, 240);  // TODO should pass in desired width & height here
+        ofVidGrabber.setDesiredFrameRate(60);
+        
+        if (videoType == VideoTypeCodeLabsPSEye) {
+#ifndef TARGET_OSX
+            ofVidGrabber.setAutoExposure(false);
+            ofVidGrabber.setAutoGain(false);
+#endif
+        }
+        
+        // make sure there is sufficient space allocated for the current camera size
+        pixels.allocate(getCameraHeight(), getCameraWidth(), OF_IMAGE_COLOR);
+    }
+    else {
+        throw "Cannot specify a device ID with this type of video input.";
     }
 }
 
