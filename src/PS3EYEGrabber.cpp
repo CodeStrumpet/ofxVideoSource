@@ -65,8 +65,10 @@ PS3EYEGrabber::~PS3EYEGrabber() {
     threadUpdate.stop();
     // You should stop before exiting
     // otherwise the app will keep working
-    if(eye) eye->stop();
-	delete[] videoFrame;
+    if(eye) {
+        eye->stop();
+        delete[] videoFrame;
+    }
 }
 
 void PS3EYEGrabber::setupCamera(int width, int height) {
